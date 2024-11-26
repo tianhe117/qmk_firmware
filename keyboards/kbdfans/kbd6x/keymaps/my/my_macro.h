@@ -120,6 +120,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 
     switch (keycode)
     {
+    case KC_LALT:
+        if (record->event.pressed)
+        {
+            lalt_tap_dance.press = true;
+        }
+        else
+        {
+            lalt_tap_dance.press = false;
+        }
+        break;
+
     case MC_Q:
         if (record->event.pressed)
         {
