@@ -46,4 +46,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         KC_MPRV,          KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, NK_TOGG, _______, _______, KC_END,  KC_PGDN,          KC_MNXT,
         _______, TG(1),   _______,                            _______,                            _______, _______, _______, _______
     )
- };
+};
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    uint8_t layer = get_highest_layer(layer_state | default_layer_state);
+
+    if (layer > 0) {
+        switch (layer) {
+            case _DEFAULT_LAYER:
+                rgb_matrix_set_color_all(RGB_BLUE);
+                break;
+            case 2:
+                // rgb_matrix_set_color_all(RGB_RED);
+                break;
+            case _FN1:
+                rgb_matrix_set_color_all(RGB_YELLOW);
+                break;
+            default:
+                break;
+        }
+    }
+
+    if (host_keyboard_led_state().caps_lock) {
+        //RGB_MATRIX_INDICATOR_SET_COLOR(29, 255, 255, 255); // assuming caps lock is at led #5
+        //RGB_MATRIX_INDICATOR_SET_COLOR(28, 255, 255, 255); // assuming caps lock is at led #5
+        RGB_MATRIX_INDICATOR_SET_COLOR(27, 255, 255, 255); // assuming caps lock is at led #5
+    }
+
+    return false;
+}
