@@ -124,7 +124,7 @@ enum my_layers
 #define SP_SCLN     KC_NO
 #define SP_QUOT     KC_NO
 #define SP_ENT      KC_NO
-#define SP_LSFT     KC_NO
+#define SP_LSFT     KC_TRNS
 #define SP_Z        KC_NO
 #define SP_X        KC_NO
 #define SP_C        KC_NO
