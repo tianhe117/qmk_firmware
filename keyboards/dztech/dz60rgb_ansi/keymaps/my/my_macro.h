@@ -217,7 +217,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             unregister_code(KC_LCTL);
             if (mc_ctl_tap_dance.cnt > 1U)
             {
-                tap_code_delay(KC_CAPS, 25);
+                //tap_code_delay(KC_CAPS, 25); //双击键入caps
                 mc_ctl_tap_dance.cnt = 0U;
             }
         }

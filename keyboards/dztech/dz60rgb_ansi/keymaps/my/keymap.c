@@ -50,6 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     uint8_t layer = get_highest_layer(layer_state | default_layer_state);
+    uint8_t i = 0U;
 
     if (layer > 0) {
         switch (layer) {
@@ -75,6 +76,16 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     else
     {
         RGB_MATRIX_INDICATOR_SET_COLOR(40, 0, 0, 0); // KC_CAPS is at led 40
+    }
+
+    // set  kc0 - kc9 led on in RGB_MATRIX_TYPING_HEATMAP
+    if((rgb_matrix_get_mode() >= RGB_MATRIX_TYPING_HEATMAP)
+       &&(rgb_matrix_get_mode() != RGB_MATRIX_SOLID_REACTIVE))
+    {
+        for (i = 1U; i <= 12U; i++)
+        {
+            RGB_MATRIX_INDICATOR_SET_COLOR(i, 255, 255, 255); // KC_TAB is at led 27
+        }
     }
 
     return false;
