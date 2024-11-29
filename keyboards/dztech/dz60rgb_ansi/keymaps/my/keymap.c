@@ -16,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,
         KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT,
         KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,
-        KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                             KC_RALT, KC_RGUI, MO(5),   KC_RCTL
+        KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                             KC_RALT, KC_APP,  MO(5),   KC_RCTL
      ),
     [_SPC_LAYER] = LAYOUT_60_ansi(
         SP_ESC,  SP_1,    SP_2,    SP_3,    SP_4,    SP_5,    SP_6,    SP_7,    SP_8,    SP_9,    SP_0,    SP_MINS, SP_EQL,  SP_BSPC,
@@ -70,7 +70,11 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     if (host_keyboard_led_state().caps_lock) {
         //RGB_MATRIX_INDICATOR_SET_COLOR(29, 255, 255, 255); // assuming caps lock is at led #5
         //RGB_MATRIX_INDICATOR_SET_COLOR(28, 255, 255, 255); // assuming caps lock is at led #5
-        RGB_MATRIX_INDICATOR_SET_COLOR(27, 255, 255, 255); // assuming caps lock is at led #5
+        //RGB_MATRIX_INDICATOR_SET_COLOR(27, 255, 255, 255); // KC_TAB is at led 27
+    }
+    else
+    {
+        RGB_MATRIX_INDICATOR_SET_COLOR(40, 0, 0, 0); // KC_CAPS is at led 40
     }
 
     return false;
