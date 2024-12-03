@@ -111,7 +111,7 @@ enum my_layers
 #define SP_LBRC     KC_NO
 #define SP_RBRC     KC_NO
 #define SP_BSLS     KC_TRNS
-#define SP_CAPS     KC_NO
+#define SP_CAPS     KC_CAPS
 #define SP_A        KC_LEFT
 #define SP_S        KC_DOWN
 #define SP_D        KC_RIGHT

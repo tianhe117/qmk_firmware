@@ -1,3 +1,4 @@
+#include QMK_KEYBOARD_H
 //macro
 #define MC_SPC_HOLD_TERM      1200
 #define MC_SPC_TAP_TERM       50
@@ -17,6 +18,8 @@ static bool s_is_non_spc_pressed = false;
 static bool s_is_non_win_pressed = false;
 
 static bool s_is_need_spc_hold = false;
+
+static bool s_is_ralt_hold = false;
 
 static mc_tap_dance_t mc_spc_tap_dance = { 0 };
 static mc_tap_dance_t mc_win_tap_dance = { 0 };
@@ -131,6 +134,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         }
         break;
 
+    case KC_RALT:
+        if (record->event.pressed)
+        {
+            s_is_ralt_hold = true;
+        }
+        else
+        {
+            s_is_ralt_hold = false;
+        }
+        break;
+
     case MC_Q:
         if (record->event.pressed)
         {
@@ -217,7 +231,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             unregister_code(KC_LCTL);
             if (mc_ctl_tap_dance.cnt > 1U)
             {
-                tap_code_delay(KC_CAPS, 25);
+                //tap_code_delay(KC_CAPS, 25); //双击键入caps
                 mc_ctl_tap_dance.cnt = 0U;
             }
         }
