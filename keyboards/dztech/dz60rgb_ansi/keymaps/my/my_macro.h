@@ -1,3 +1,4 @@
+#include QMK_KEYBOARD_H
 //macro
 #define MC_SPC_HOLD_TERM      1200
 #define MC_SPC_TAP_TERM       50
@@ -17,6 +18,8 @@ static bool s_is_non_spc_pressed = false;
 static bool s_is_non_win_pressed = false;
 
 static bool s_is_need_spc_hold = false;
+
+static bool s_is_ralt_hold = false;
 
 static mc_tap_dance_t mc_spc_tap_dance = { 0 };
 static mc_tap_dance_t mc_win_tap_dance = { 0 };
@@ -128,6 +131,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         else
         {
             lalt_tap_dance.press = false;
+        }
+        break;
+
+    case KC_RALT:
+        if (record->event.pressed)
+        {
+            s_is_ralt_hold = true;
+        }
+        else
+        {
+            s_is_ralt_hold = false;
         }
         break;
 
