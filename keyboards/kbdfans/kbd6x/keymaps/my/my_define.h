@@ -169,12 +169,23 @@ enum my_layers
 #define FN_MINS     KC_F11
 #define FN_EQL      KC_F12
 #define FN_BSPC     KC_NO
+
+#ifdef ENABLE_MY_RGB
 #define FN_TAB      RGB_TOG
 #define FN_Q        RGB_MOD
 #define FN_W        RGB_VAI
 #define FN_E        RGB_HUI
 #define FN_R        RGB_SAI
 #define FN_T        RGB_SPI
+#else
+#define FN_TAB      KC_NO
+#define FN_Q        KC_NO
+#define FN_W        KC_NO
+#define FN_E        KC_NO
+#define FN_R        KC_NO
+#define FN_T        KC_NO
+#endif
+
 #define FN_Y        KC_NO
 #define FN_U        KC_NO
 #define FN_I        KC_NO
@@ -184,11 +195,21 @@ enum my_layers
 #define FN_RBRC     KC_NO
 #define FN_BSLS     KC_NO
 #define FN_CAPS     KC_CAPS
+
+#ifdef ENABLE_MY_RGB
 #define FN_A        RGB_RMOD
 #define FN_S        RGB_VAD
 #define FN_D        RGB_HUD
 #define FN_F        RGB_SAD
 #define FN_G        RGB_SPD
+#else
+#define FN_A        KC_NO
+#define FN_S        KC_NO
+#define FN_D        KC_NO
+#define FN_F        KC_NO
+#define FN_G        KC_NO
+#endif
+
 #define FN_H        KC_NO
 #define FN_J        KC_NO
 #define FN_K        KC_NO
@@ -213,7 +234,7 @@ enum my_layers
 #define FN_LALT     EE_CLR
 #define FN_SPC      QK_BOOT
 #define FN_RALT     QK_RBT
-#define FN_RGUI     KC_NO
+#define FN_RGUI     TG(_FN1)
 #define FN_RCTL     KC_NO
 #define FN_FN       KC_TRNS
 

@@ -2,6 +2,8 @@
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
+#ifdef ENABLE_MY_RGB
+
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
@@ -54,3 +56,5 @@
 // #define ENABLE_RGB_MATRIX_MULTISPLASH
 // #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH // 单击后从按键处向四周扩散单色灯
+
+#endif
