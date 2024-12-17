@@ -1,5 +1,11 @@
 #include QMK_KEYBOARD_H
+
 #define ENABLE_MY_RGB
+
+#ifdef ENABLE_MY_RGB
+  #define CAPS_LOCK_LED   40
+#endif
+
 #include "my_define.h"
 #include "my_macro.h"
 #include "my_rgb.h"

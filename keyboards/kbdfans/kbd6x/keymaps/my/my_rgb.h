@@ -22,13 +22,11 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
 
     if (host_keyboard_led_state().caps_lock)
     {
-        // RGB_MATRIX_INDICATOR_SET_COLOR(29, 255, 255, 255); // assuming caps lock is at led #5
-        // RGB_MATRIX_INDICATOR_SET_COLOR(28, 255, 255, 255); // assuming caps lock is at led #5
-        // RGB_MATRIX_INDICATOR_SET_COLOR(27, 255, 255, 255); // KC_TAB is at led 27
+        RGB_MATRIX_INDICATOR_SET_COLOR(CAPS_LOCK_LED, 255, 255, 255); // KC_CAPS is at led 40
     }
     else
     {
-        RGB_MATRIX_INDICATOR_SET_COLOR(40, 0, 0, 0); // KC_CAPS is at led 40
+        RGB_MATRIX_INDICATOR_SET_COLOR(CAPS_LOCK_LED, 0, 0, 0); // KC_CAPS is at led 40
     }
 
 //    // set  kc0 - kc9 led on in RGB_MATRIX_TYPING_HEATMAP

@@ -8,6 +8,6 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 #CONSOLE_ENABLE = no         # Console for debug (0% space)
 #COMMAND_ENABLE = no         # Commands for debug and configuration (0% space)
 #BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality (0% space)
-RGBLIGHT_ENABLE = no        # Enable keyboard RGB light (0% space)
+#RGBLIGHT_ENABLE = no        # Enable keyboard RGB light (0% space)
 #AUDIO_ENABLE = no           # Audio output (0% space)
 
