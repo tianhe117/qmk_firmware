@@ -22,7 +22,7 @@ enum my_layers
 #define BA_0        KC_0
 #define BA_MINS     KC_MINS
 #define BA_EQL      KC_EQL
-#define BA_BSPC     KC_BSLS
+#define BA_BSPC     KC_BSPC
 #define BA_TAB      KC_TAB
 #define BA_Q        MC_Q
 #define BA_W        KC_W
@@ -36,7 +36,7 @@ enum my_layers
 #define BA_P        KC_P
 #define BA_LBRC     KC_LBRC
 #define BA_RBRC     KC_RBRC
-#define BA_BSLS     KC_BSPC
+#define BA_BSLS     KC_BSLS
 #define BA_CAPS     MC_CTL
 #define BA_A        KC_A
 #define BA_S        KC_S
@@ -110,7 +110,7 @@ enum my_layers
 #define SP_P        KC_NO
 #define SP_LBRC     KC_NO
 #define SP_RBRC     KC_NO
-#define SP_BSLS     KC_TRNS
+#define SP_BSLS     KC_NO
 #define SP_CAPS     KC_CAPS
 #define SP_A        KC_LEFT
 #define SP_S        KC_DOWN
