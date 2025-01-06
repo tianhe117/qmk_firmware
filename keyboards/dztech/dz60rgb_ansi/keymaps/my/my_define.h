@@ -62,13 +62,13 @@ enum my_layers
 #define BA_DOT      KC_DOT
 #define BA_SLSH     KC_SLSH
 #define BA_RSFT     KC_RSFT
-#define BA_LCTL     KC_LCTL
+#define BA_LCTL     KC_NO
 #define BA_LGUI     KC_LALT
 #define BA_LALT     MC_WIN
 #define BA_SPC      MC_SPC
 #define BA_RALT     KC_RGUI
 #define BA_RGUI     KC_RALT 
-#define BA_RCTL     KC_RCTL
+#define BA_RCTL     KC_NO
 #define BA_FN       MO(_FN_LAYER)
 
 #define BA_MUTE     KC_MUTE
@@ -110,7 +110,7 @@ enum my_layers
 #define SP_P        KC_NO
 #define SP_LBRC     KC_NO
 #define SP_RBRC     KC_NO
-#define SP_BSLS     KC_TRNS
+#define SP_BSLS     KC_NO
 #define SP_CAPS     KC_CAPS
 #define SP_A        KC_LEFT
 #define SP_S        KC_DOWN
@@ -308,7 +308,7 @@ enum my_layers
 #define F1_RALT     KC_TRNS
 #define F1_RGUI     KC_TRNS
 #define F1_RCTL     KC_TRNS
-#define F1_FN       TO(_BASE_LAYER)
+#define F1_FN       KC_TRNS
 
 #define F1_MUTE     KC_TRNS
 
