@@ -3,12 +3,14 @@
 #define ENABLE_MY_RGB
 
 #ifdef ENABLE_MY_RGB
-  #define CAPS_LOCK_LED   40
+  #define CAPS_LOCK_LED   (28)
+  #define LSHIFT_LED      (41)
+  #define TOTAL_LED       (61)
 #endif
 
 #include "my_define.h"
 #include "my_macro.h"
-//#include "my_rgb.h"
+#include "my_rgb.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 {
@@ -38,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         FN_TAB,  FN_Q,    FN_W,    FN_E,    FN_R,    FN_T,    FN_Y,    FN_U,    FN_I,    FN_O,    FN_P,    FN_LBRC, FN_RBRC, FN_BSLS,
         FN_CAPS, FN_A,    FN_S,    FN_D,    FN_F,    FN_G,    FN_H,    FN_J,    FN_K,    FN_L,    FN_SCLN, FN_QUOT,          FN_ENT,
         FN_LSFT,          FN_Z,    FN_X,    FN_C,    FN_V,    FN_B,    FN_N,    FN_M,    FN_COMM, FN_DOT,  FN_SLSH,          FN_RSFT,
-        FN_LCTL, KC_NO,   FN_LALT,                            FN_SPC,                             FN_RALT, KC_NO,   FN_FN,   FN_RCTL
+        FN_LCTL, FN_LGUI, FN_LALT,                            FN_SPC,                             FN_RALT, FN_RGUI, FN_FN,   FN_RCTL
     ),
     [_FN1] = LAYOUT_60_ansi(
         F1_ESC,  F1_1,    F1_2,    F1_3,    F1_4,    F1_5,    F1_6,    F1_7,    F1_8,    F1_9,    F1_0,    F1_MINS, F1_EQL,  F1_BSPC,
@@ -48,11 +50,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         F1_LCTL, F1_LGUI, F1_LALT,                            F1_SPC,                             F1_RALT, F1_RGUI, F1_FN,   F1_RCTL
      ),
     [5] = LAYOUT_60_ansi(
-        KC_NO,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NO,
-        KC_NO,   KC_NO,   KC_UP,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_DEL,
+        KC_NO,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,
+        KC_NO,   KC_NO,   KC_UP,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
         KC_NO,   KC_LEFT, KC_DOWN, KC_RGHT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,
         KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,
-        FN_LCTL, KC_NO,   FN_LALT,                            FN_SPC,                             FN_RALT, KC_NO,   FN_FN,   FN_RCTL
+        FN_LCTL, FN_LGUI, FN_LALT,                            FN_SPC,                             FN_RALT, FN_RGUI, FN_FN,   FN_RCTL
     )
 };
 

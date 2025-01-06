@@ -3,7 +3,9 @@
 #define ENABLE_MY_RGB
 
 #ifdef ENABLE_MY_RGB
-  #define CAPS_LOCK_LED   29
+  #define CAPS_LOCK_LED   (29)
+  #define LSHIFT_LED      (42)
+  #define TOTAL_LED       (62)
 #endif
 
 #include "my_define.h"

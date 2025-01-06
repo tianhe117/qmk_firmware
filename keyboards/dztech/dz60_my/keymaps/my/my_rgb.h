@@ -16,13 +16,13 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
         switch (layer)
         {
         case _DEFAULT_LAYER:
-            set_rgb_led(42, 62, RGB_YELLOW);
+            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_YELLOW);
             break;
         case _FN1:
-            set_rgb_led(42, 62, RGB_WHITE);
+            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_WHITE);
             break;
         case 5:
-            set_rgb_led(42, 62, RGB_YELLOW);
+            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_YELLOW);
             break;
         default:
             break;
@@ -31,7 +31,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
 
     if (host_keyboard_led_state().caps_lock)
     {
-        set_rgb_led(CAPS_LOCK_LED, CAPS_LOCK_LED + 13, RGB_WHITE);
+        set_rgb_led(CAPS_LOCK_LED, LSHIFT_LED, RGB_WHITE);
     }
 
     return false;
