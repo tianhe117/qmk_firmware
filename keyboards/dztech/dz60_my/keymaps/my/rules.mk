@@ -1,5 +1,5 @@
 VIA_ENABLE = yes
-LTO_ENABLE = yes
+#LTO_ENABLE = yes
 NKRO_ENABLE = yes           # Enable N-Key Rollover
 
 #BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite (0% space)
