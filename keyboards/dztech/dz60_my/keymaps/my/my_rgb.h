@@ -16,13 +16,13 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max)
         switch (layer)
         {
         case _DEFAULT_LAYER:
-            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_YELLOW);
+            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_RED);
             break;
         case _FN1:
             set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_WHITE);
             break;
         case 5:
-            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_YELLOW);
+            set_rgb_led(LSHIFT_LED, TOTAL_LED, RGB_RED);
             break;
         default:
             break;
